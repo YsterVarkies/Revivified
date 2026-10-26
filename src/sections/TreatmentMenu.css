@@ -251,8 +251,9 @@
   .menu__group-photo {
     display: block;
     width: 100%;
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 4 / 5;
     object-fit: cover;
+    object-position: top center;
     margin-bottom: 24px;
   }
 
