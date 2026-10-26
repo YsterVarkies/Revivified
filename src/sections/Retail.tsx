@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import SplitText from '@/components/SplitText';
-import { counterNote, retail } from '@/data/site';
+import { ginCaviar, retail } from '@/data/site';
 import { gsap, MOTION_OK, useGSAP } from '@/lib/gsap';
 import './Retail.css';
 
@@ -76,7 +76,17 @@ export default function Retail() {
         </article>
       ))}
 
-      <p className="retail__note">{counterNote}</p>
+      <article className="retail__row retail__row--gin">
+        <div className="retail__text">
+          <h3>{ginCaviar.name}</h3>
+          <p>{ginCaviar.text}</p>
+        </div>
+        <div className="retail__photo retail__gin">
+          {ginCaviar.photos.map(photo => (
+            <img key={photo.src} src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} loading="lazy" />
+          ))}
+        </div>
+      </article>
     </section>
   );
 }

@@ -80,11 +80,20 @@
   aspect-ratio: 1;
 }
 
-.retail__note {
-  margin: clamp(96px, 9vw, 140px) auto 0;
-  max-width: 52ch;
-  text-align: center;
-  color: var(--ink-soft);
+.retail__gin {
+  width: clamp(300px, 36vw, 520px);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  background: none;
+}
+
+.retail__gin img {
+  aspect-ratio: 4 / 5;
+}
+
+.retail__gin img:nth-child(even) {
+  margin-top: 48px;
 }
 
 @media (max-width: 1023px) and (min-width: 768px) {
@@ -128,7 +137,11 @@
     width: 55%;
   }
 
-  .retail__note {
-    margin: 72px 0 0;
+  .retail__row--gin .retail__photo {
+    width: 100%;
+  }
+
+  .retail__gin img:nth-child(even) {
+    margin-top: 32px;
   }
 }

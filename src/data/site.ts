@@ -207,8 +207,16 @@ export const retail = [
   },
 ];
 
-export const counterNote =
-  'Also at the counter: Gin and Fruit Caviar in thirteen flavours, from chilli and mango to rooibos and ginger.';
+export const ginCaviar = {
+  name: 'Gin and Fruit Caviar',
+  text: 'Fruit caviar in thirteen flavours, from chilli and mango to rooibos and ginger, to spoon into your gin and tonic. The gin is on the shelf beside it.',
+  photos: [
+    { src: asset('images/gin-caviar-pour.webp'), alt: 'Red fruit caviar running off a spoon into a glass of gin', width: 457, height: 795 },
+    { src: asset('images/caviar-kleinkaroo.webp'), alt: 'A jar of Kleinkaroo Kaviar in very berry with blueberries on a silver mirror tray', width: 571, height: 656 },
+    { src: asset('images/gin-bottles.webp'), alt: 'Blue gin bottles with cork stoppers and black ribbons on display stands', width: 577, height: 621 },
+    { src: asset('images/gin-caviar-glass.webp'), alt: 'A hand holding a gin glass with berries and a strawberry on the rim', width: 456, height: 476 },
+  ],
+};
 
 export const reviews = [
   'Calm, relaxing, private and clean. Great therapists that are very knowledgeable. Definitely recommend.',

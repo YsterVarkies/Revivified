@@ -20,9 +20,13 @@ export default function Hero() {
 
         gsap.fromTo('.hero__picture', { '--k': 1 }, { '--k': 0, ease: 'none', scrollTrigger: { ...trigger, end: () => `+=${openOver()}` } });
         gsap.fromTo('.hero__picture img', { scale: 1.12 }, { scale: 1, ease: 'none', scrollTrigger: { ...trigger, end: () => `+=${openOver()}` } });
+        gsap.to('.hero__picture', {
+          filter: 'brightness(0.62)',
+          ease: 'none',
+          scrollTrigger: { ...trigger, end: () => `+=${openOver() * 0.38}` },
+        });
         gsap.to('.hero__words', {
-          y: -48,
-          opacity: 0,
+          color: '#ffffff',
           ease: 'none',
           scrollTrigger: { ...trigger, end: () => `+=${openOver() * 0.38}` },
         });
