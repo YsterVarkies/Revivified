@@ -155,6 +155,10 @@ export const womanOnTheMove = {
     { src: asset('images/wotm-crossbody.webp'), alt: 'A tan Woman on the Move crossbody phone wallet' },
     { src: asset('images/wotm-leopard.webp'), alt: 'A leopard print crossbody phone pouch' },
     { src: asset('images/wotm-phone.webp'), alt: 'A phone on a beige crossbody strap' },
+    {
+      src: asset('images/wotm-chain-set.webp'),
+      alt: 'A clear phone case with a gold chain, a beige zip pouch and a woven crossbody strap',
+    },
   ],
 };
 
