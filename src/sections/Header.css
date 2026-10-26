@@ -81,7 +81,7 @@
   display: none;
 }
 
-@media (max-width: 899px) {
+@media (max-width: 1023px) {
   .site-header {
     display: none;
   }
@@ -120,7 +120,7 @@
 
   .mobile-nav .sm-panel-item {
     font-family: var(--font-display);
-    font-size: var(--step-display);
+    font-size: min(var(--step-display), 5.6svh);
     font-weight: 500;
     letter-spacing: -0.02em;
     text-transform: none;

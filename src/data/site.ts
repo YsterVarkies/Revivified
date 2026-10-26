@@ -23,6 +23,9 @@ export const nav = [
   { label: 'Treatments', href: '#treatments' },
   { label: 'Academy', href: '#academy' },
   { label: 'Boutique', href: '#boutique' },
+  { label: 'Dress hire', href: '#dress-hire' },
+  { label: 'Phone cases', href: '#woman-on-the-move' },
+  { label: 'Products', href: '#products' },
   { label: 'Testimonials', href: '#reviews' },
   { label: 'Visit', href: '#visit' },
 ];
