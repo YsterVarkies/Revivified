@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import SplitText from '@/components/SplitText';
 import { reviews } from '@/data/site';
 import { gsap, MOTION_OK, useGSAP } from '@/lib/gsap';
+import { asset } from '@/lib/asset';
 import './Reviews.css';
 
 export default function Reviews() {
@@ -61,7 +62,7 @@ export default function Reviews() {
       </h2>
       <img
         className="reviews__photo"
-        src="/images/calla-lily.webp"
+        src={asset('images/calla-lily.webp')}
         alt=""
         width={2400}
         height={1350}

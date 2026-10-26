@@ -2,11 +2,12 @@ import { useRef } from 'react';
 import StaggeredMenu from '@/components/StaggeredMenu';
 import { contact, nav } from '@/data/site';
 import { ScrollTrigger, useGSAP } from '@/lib/gsap';
+import { asset } from '@/lib/asset';
 import './Header.css';
 
 const Wordmark = () => (
   <a className="wordmark" href="#top" aria-label="Revivified Beauty, back to the top">
-    <img src="/logo-mark.png" alt="" width={46} height={36} />
+    <img src={asset('logo-mark.png')} alt="" width={46} height={36} />
     <span>Revivified Beauty</span>
   </a>
 );

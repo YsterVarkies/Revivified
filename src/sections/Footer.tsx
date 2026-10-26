@@ -1,13 +1,14 @@
 import FlowingMenu from '@/components/FlowingMenu';
 import { contact, credits, whatsappLink } from '@/data/site';
+import { asset } from '@/lib/asset';
 import './Footer.css';
 
 const menu = [
-  { text: 'Treatments', link: '#treatments', image: '/images/menu-face.webp', marquee: 'Skin, laser, make-up, nails' },
-  { text: 'Academy', link: '#academy', image: '/images/treatment-room.webp', marquee: 'Twenty-nine courses' },
-  { text: 'Boutique', link: '#boutique', image: '/images/ella-floral.webp', marquee: 'Dresses for hire' },
-  { text: 'Products', link: '#products', image: '/images/retail-lovella.webp', marquee: 'On our shelves' },
-  { text: 'Visit', link: '#visit', image: '/images/lounge-window.webp', marquee: '32 Peter Mokaba Street' },
+  { text: 'Treatments', link: '#treatments', image: asset('images/menu-face.webp'), marquee: 'Skin, laser, make-up, nails' },
+  { text: 'Academy', link: '#academy', image: asset('images/treatment-room.webp'), marquee: 'Twenty-nine courses' },
+  { text: 'Boutique', link: '#boutique', image: asset('images/ella-floral.webp'), marquee: 'Dresses for hire' },
+  { text: 'Products', link: '#products', image: asset('images/retail-lovella.webp'), marquee: 'On our shelves' },
+  { text: 'Visit', link: '#visit', image: asset('images/lounge-window.webp'), marquee: '32 Peter Mokaba Street' },
 ];
 
 export default function Footer() {
@@ -15,7 +16,7 @@ export default function Footer() {
     <footer className="footer" aria-labelledby="footer-title">
       <div className="footer__photo">
         <img
-          src="/images/salon-mirror-chair.webp"
+          src={asset('images/salon-mirror-chair.webp')}
           alt="A silver baroque mirror, cane chairs and the GHD shelves in the salon lounge"
           width={1000}
           height={1288}

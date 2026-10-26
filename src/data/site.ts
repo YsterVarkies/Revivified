@@ -1,6 +1,8 @@
 // Every fact on the page lives here, taken from revivifiedbeauty.mypixieset.com,
 // the salon's printed flyers and @revivifiedbeauty. Change it here, not in the sections.
 
+import { asset } from '@/lib/asset';
+
 export const contact = {
   name: 'Revivified Beauty',
   street: '32 Peter Mokaba Street',
@@ -31,8 +33,8 @@ export const story =
 // Bruidsgids & Wedding Guide membership badges, shown beside the salon's story.
 // Add a new year by saving its badge in public/images and adding a line here.
 export const badges = [
-  { src: '/images/bgwg-member-2024.webp', alt: 'Proud member of Bruidsgids Wedding Guide, 2024' },
-  { src: '/images/bgwg-member-2025.webp', alt: 'Proud member of Bruidsgids Wedding Guide, 2025' },
+  { src: asset('images/bgwg-member-2024.webp'), alt: 'Proud member of Bruidsgids Wedding Guide, 2024' },
+  { src: asset('images/bgwg-member-2025.webp'), alt: 'Proud member of Bruidsgids Wedding Guide, 2025' },
 ];
 
 export type Treatment = { id: string; name: string; detail: string };
@@ -49,7 +51,7 @@ export const treatmentGroups: TreatmentGroup[] = [
   {
     id: 'skin',
     name: 'Skin and laser',
-    image: '/images/menu-skin.webp',
+    image: asset('images/menu-skin.webp'),
     alt: 'Green leaves and flower buds covered in water droplets',
     caption: 'Skin and laser',
     items: [
@@ -62,7 +64,7 @@ export const treatmentGroups: TreatmentGroup[] = [
   {
     id: 'face',
     name: 'Face and brows',
-    image: '/images/menu-face.webp',
+    image: asset('images/menu-face.webp'),
     alt: 'A bride with soft bridal make-up at a candlelit wedding table',
     caption: 'Bridal make-up by Maria',
     items: [
@@ -74,7 +76,7 @@ export const treatmentGroups: TreatmentGroup[] = [
   {
     id: 'body',
     name: 'Body',
-    image: '/images/menu-body.webp',
+    image: asset('images/menu-body.webp'),
     alt: 'A white water lily open among dark lily pads',
     caption: 'Body',
     items: [
@@ -88,7 +90,7 @@ export const treatmentGroups: TreatmentGroup[] = [
   {
     id: 'hands',
     name: 'Nails, hair and smile',
-    image: '/images/teeth-whitening.webp',
+    image: asset('images/teeth-whitening.webp'),
     alt: 'A client relaxing during a teeth whitening session under a blue light',
     caption: 'Teeth whitening, 30 minutes',
     items: [
@@ -135,14 +137,14 @@ export const academy = {
 
 export const boutique = {
   photos: [
-    { src: '/images/boutique-gown-train.webp', alt: 'A beaded silver gown with a long lace train on the lounge rug' },
-    { src: '/images/ella-pink-top.webp', alt: 'A pink bubble-hem top from Ella Carlé' },
-    { src: '/images/wotm-crossbody.webp', alt: 'A tan Woman on the Move crossbody phone wallet' },
-    { src: '/images/ella-floral.webp', alt: 'Two floral midi dresses from Ella Carlé' },
-    { src: '/images/boutique-ella-rack.webp', alt: 'Two women browsing a rail of Ella Carlé clothing' },
-    { src: '/images/wotm-leopard.webp', alt: 'A leopard print crossbody phone pouch' },
-    { src: '/images/ella-friends.webp', alt: 'Two friends in striped tops and linen shorts' },
-    { src: '/images/wotm-phone.webp', alt: 'A phone on a beige crossbody strap' },
+    { src: asset('images/boutique-gown-train.webp'), alt: 'A beaded silver gown with a long lace train on the lounge rug' },
+    { src: asset('images/ella-pink-top.webp'), alt: 'A pink bubble-hem top from Ella Carlé' },
+    { src: asset('images/wotm-crossbody.webp'), alt: 'A tan Woman on the Move crossbody phone wallet' },
+    { src: asset('images/ella-floral.webp'), alt: 'Two floral midi dresses from Ella Carlé' },
+    { src: asset('images/boutique-ella-rack.webp'), alt: 'Two women browsing a rail of Ella Carlé clothing' },
+    { src: asset('images/wotm-leopard.webp'), alt: 'A leopard print crossbody phone pouch' },
+    { src: asset('images/ella-friends.webp'), alt: 'Two friends in striped tops and linen shorts' },
+    { src: asset('images/wotm-phone.webp'), alt: 'A phone on a beige crossbody strap' },
   ],
 };
 
@@ -150,42 +152,42 @@ export const retail = [
   {
     name: 'Monteil',
     text: 'The German anti-ageing specialist, found in over 30 countries. Bio-active ingredients in high concentration, for luxury treatments in the salon and home care that keeps the result.',
-    image: '/images/retail-monteil.webp',
+    image: asset('images/retail-monteil.webp'),
     alt: 'Monteil serums, Perfect Skin and Elixir Métamorphose bottles on a wet stone ledge',
     size: 'landscape',
   },
   {
     name: 'Kalahari',
     text: 'A proudly South African range with CF Ceutical, KPhyto Ceuticals and Ancient Desert Secrets, made from sustainably sourced botanicals and suited to every skin condition.',
-    image: '/images/retail-kalahari.webp',
+    image: asset('images/retail-kalahari.webp'),
     alt: 'Kalahari Phyto Ceutical serums, booster gel and facial cleanser in copper and white',
     size: 'square',
   },
   {
     name: 'Thoclor',
     text: 'Hypochlorous acid care, with Trifectiv Plus for wounds and burns. GF1 calms and speeds healing after laser, peels, waxing and microneedling. GF2 hydrates, fades age spots and clears breakouts.',
-    image: '/images/retail-thoclor.webp',
+    image: asset('images/retail-thoclor.webp'),
     alt: 'Thoclor GF1 aftercare and GF2 skin rejuvenation bottles on marble',
     size: 'portrait',
   },
   {
     name: 'Malu Wilz and Lovella',
     text: 'Make-up made in Germany that cares for the skin, with Lovella’s coating sealer, brow styling soap and keratin lash serum.',
-    image: '/images/retail-lovella.webp',
+    image: asset('images/retail-lovella.webp'),
     alt: 'Lovella brow styling soap in an open gold compact',
     size: 'square',
   },
   {
     name: 'Pure Smile',
     text: 'Fluoride-free instant whitening toothpaste, a CBD toothpaste and activated coconut charcoal powder, all 100% natural.',
-    image: '/images/retail-pure-smile.webp',
+    image: asset('images/retail-pure-smile.webp'),
     alt: 'A tube of Pure Smile instant whitening toothpaste',
     size: 'landscape',
   },
   {
     name: 'GHD',
     text: 'The professional stylers we use for every upstyle, on the shelf to take home.',
-    image: '/images/retail-ghd.webp',
+    image: asset('images/retail-ghd.webp'),
     alt: 'A black GHD styler resting on glass prisms',
     size: 'portrait',
   },

@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import ScrollReveal from '@/components/ScrollReveal';
 import { badges, story } from '@/data/site';
 import { gsap, MOTION_OK, useGSAP } from '@/lib/gsap';
+import { asset } from '@/lib/asset';
 import './Intro.css';
 
 export default function Intro() {
@@ -47,9 +48,9 @@ export default function Intro() {
         About the salon
       </h2>
       <div className="intro__grid">
-        <a className="intro__flyer" href="/images/services-flyer.webp" target="_blank" rel="noreferrer">
+        <a className="intro__flyer" href={asset('images/services-flyer.webp')} target="_blank" rel="noreferrer">
           <img
-            src="/images/services-flyer.webp"
+            src={asset('images/services-flyer.webp')}
             alt="Revivified Beauty services: laser treatments, teeth whitening, hair and upstyles, make-up, aesthetic skincare, slimming, nails in acrylic and gel, permanent make-up, waxing, massage, sunbed and spray tan. WhatsApp 071 359 4956, Revivified.booksy.com, 32 Peter Mokaba Street, Potchefstroom."
             width={1000}
             height={1778}

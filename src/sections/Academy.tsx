@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import CountUp from '@/components/CountUp';
 import { academy, whatsappLink } from '@/data/site';
 import { gsap, MOTION_OK, useGSAP } from '@/lib/gsap';
+import { asset } from '@/lib/asset';
 import './Academy.css';
 
 const courseCount = academy.slips.reduce((sum, slip) => sum + slip.courses.length, 0);
@@ -45,7 +46,7 @@ export default function Academy() {
     <section ref={root} id="academy" className="academy" aria-labelledby="academy-title">
       <img
         className="academy__photo"
-        src="/images/treatment-room.webp"
+        src={asset('images/treatment-room.webp')}
         alt="The treatment room: a silver desk, tall windows onto the garden and a gown on a mannequin"
         width={1440}
         height={810}

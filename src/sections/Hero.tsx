@@ -3,6 +3,7 @@ import SplitText from '@/components/SplitText';
 import Magnet from '@/components/Magnet';
 import { contact } from '@/data/site';
 import { gsap, MOTION_OK, useGSAP } from '@/lib/gsap';
+import { asset } from '@/lib/asset';
 import './Hero.css';
 
 // The salon's own lounge is the first thing you see: a small window onto the room
@@ -37,7 +38,7 @@ export default function Hero() {
       <div className="hero__stage">
         <div className="hero__picture">
           <img
-            src="/images/salon-lounge.webp"
+            src={asset('images/salon-lounge.webp')}
             alt="The lounge at Revivified Beauty: silver cane chairs around a glass table, shelves of GHD stylers and the Welkom board"
             width={2340}
             height={1560}

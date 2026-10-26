@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import Magnet from '@/components/Magnet';
 import { contact, whatsappLink } from '@/data/site';
 import { gsap, MOTION_OK, useGSAP } from '@/lib/gsap';
+import { asset } from '@/lib/asset';
 import './Visit.css';
 
 export default function Visit() {
@@ -32,7 +33,7 @@ export default function Visit() {
     <section ref={root} id="visit" className="visit" aria-labelledby="visit-title">
       <div className="visit__photo">
         <img
-          src="/images/lounge-window.webp"
+          src={asset('images/lounge-window.webp')}
           alt="A bride in a beaded gown by the lounge window, beside a tufted silver settee"
           width={1920}
           height={1080}

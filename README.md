@@ -11,7 +11,14 @@ npm install
 npm run dev
 ```
 
-`npm run build` writes the static site to `dist/`, ready for any static host (Netlify, Vercel, Cloudflare Pages).
+`npm run build` writes the static site to `dist/`, ready for any static host.
+
+## Deploy
+
+Every push to `main` builds the site and publishes it to GitHub Pages at
+https://ystervarkies.github.io/Revivified/ (`.github/workflows/deploy.yml`). The workflow sets `BASE_PATH` to
+`/Revivified/`; locally it stays `/`. Files in `public/` are referenced through `asset()` in `src/lib/asset.ts` so they
+follow the base path. With a custom domain, drop `BASE_PATH` from the workflow.
 
 ## Where things live
 
