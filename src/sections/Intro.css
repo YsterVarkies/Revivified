@@ -1,0 +1,138 @@
+.intro {
+  position: relative;
+  z-index: 1;
+  background: var(--ground);
+  padding: clamp(96px, 11vw, 160px) var(--margin);
+}
+
+.intro__grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gutter);
+  align-items: start;
+}
+
+/* The salon's own services flyer holds the left half; the story, badges and note stand on the right. */
+.intro__flyer {
+  grid-column: 1 / 5;
+  grid-row: 1 / span 3;
+  display: block;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.intro__flyer img {
+  width: 100%;
+  height: auto;
+  transition: scale 900ms var(--ease-out);
+}
+
+.intro__flyer:hover img {
+  scale: 1.03;
+}
+
+.intro .intro__statement {
+  grid-column: 6 / 13;
+  grid-row: 1;
+  margin: 12vh 0 0;
+}
+
+.intro .scroll-reveal-text {
+  font-family: var(--font-display);
+  font-size: var(--step-lead);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+  text-indent: 3em;
+}
+
+.intro .scroll-reveal-word,
+.intro .scroll-reveal-piece {
+  text-indent: 0;
+}
+
+.intro__badges {
+  grid-column: 6 / 13;
+  grid-row: 2;
+  margin: 64px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.intro__badges img {
+  width: clamp(130px, 11vw, 170px);
+  height: auto;
+  transition: rotate 600ms var(--ease-out);
+}
+
+.intro__badges img:hover {
+  rotate: -8deg;
+}
+
+.intro__note {
+  grid-column: 6 / 10;
+  grid-row: 3;
+  margin-top: 40px;
+  max-width: 220px;
+  font-size: var(--step-small);
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .intro__flyer {
+    grid-column: 1 / 6;
+  }
+
+  .intro .intro__statement {
+    grid-column: 6 / 13;
+    margin-top: 0;
+  }
+
+  .intro__badges,
+  .intro__note {
+    grid-column: 6 / 13;
+  }
+}
+
+@media (max-width: 767px) {
+  .intro {
+    padding: 96px 20px;
+  }
+
+  .intro .intro__statement {
+    grid-column: 1 / -1;
+    margin-top: 0;
+  }
+
+  .intro .scroll-reveal-text {
+    text-indent: 0;
+  }
+
+  .intro__badges {
+    grid-column: 6 / 13;
+    grid-row: 2;
+    margin-top: 40px;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+
+  .intro__badges img {
+    width: 92px;
+  }
+
+  .intro__note {
+    grid-column: 1 / 6;
+    grid-row: 2;
+    align-self: end;
+    margin-top: 0;
+    max-width: none;
+  }
+
+  .intro__flyer {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    margin-top: 48px;
+  }
+}

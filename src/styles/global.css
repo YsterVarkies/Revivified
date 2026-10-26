@@ -1,0 +1,250 @@
+/* Revivified Beauty: tokens and foundation.
+   Palette kept from the brand: the silver-grey walls of the salon, the deep teal of the logo's R. */
+
+/* Self-hosted (SIL Open Font Licence), latin subset. */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('/fonts/playfair-display.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url('/fonts/jost.woff2') format('woff2');
+}
+
+:root {
+  --ground: #edede9;
+  --surface: #e2e3de;
+  --paper: #f6f7f6;
+  --ink: #1c2a2c;
+  --ink-soft: #4f5c5c;
+  --accent: #1e6f73;
+  --accent-press: #165659;
+  --accent-ink: #ffffff;
+  --field: #1f3537;
+  --field-ink: #eef0ec;
+  --field-soft: #b4c3c1;
+  --scrim: rgb(12 20 21 / 0.5);
+
+  --font-display: 'Playfair Display', 'Didot', Georgia, serif;
+  --font-text: 'Jost', 'Futura', 'Century Gothic', system-ui, sans-serif;
+
+  /* Five sizes do all the work. */
+  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --step-lead: clamp(1.25rem, 1rem + 1vw, 2rem);
+  --step-head: clamp(2rem, 1.2rem + 2.4vw, 3.25rem);
+  --step-display: clamp(2.75rem, 1rem + 3.4vw, 4.25rem);
+
+  --margin: clamp(20px, 2.2vw, 32px);
+  --gutter: clamp(16px, 1.6vw, 24px);
+  --section: clamp(7.5rem, 12vw, 12rem);
+  --radius: 0px;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+  --t-press: 140ms;
+  --t-hover: 200ms;
+  --t-ui: 260ms;
+
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background: var(--ground);
+}
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font-text);
+  font-size: var(--step-body);
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+blockquote,
+ul,
+ol,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+:target {
+  scroll-margin-top: 5rem;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-optical-sizing: auto;
+  letter-spacing: -0.02em;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* One button: square, one fill. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  min-height: 52px;
+  padding: 0 1.6em;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-family: var(--font-text);
+  font-size: var(--step-body);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  border-radius: var(--radius);
+  transition:
+    background-color var(--t-hover) ease,
+    transform var(--t-press) var(--ease-out);
+}
+
+.btn:hover {
+  background: var(--accent-press);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn--paper {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.btn--paper:hover {
+  background: #ffffff;
+}
+
+.btn__arrow {
+  display: inline-block;
+  transition: transform var(--t-ui) var(--ease-out);
+}
+
+.btn:hover .btn__arrow,
+.text-link:hover .btn__arrow {
+  transform: translateX(4px);
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4em;
+  color: inherit;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
+  transition:
+    color var(--t-hover) ease,
+    text-underline-offset var(--t-ui) var(--ease-out);
+}
+
+.text-link:hover {
+  color: var(--accent);
+  text-underline-offset: 0.45em;
+}
+
+.magnet-wrap {
+  display: inline-block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

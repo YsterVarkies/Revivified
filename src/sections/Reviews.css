@@ -1,0 +1,119 @@
+.reviews {
+  position: relative;
+  z-index: 1;
+  height: max(90svh, 620px);
+  overflow: hidden;
+  background: #121816;
+  color: var(--paper);
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gutter);
+  align-items: end;
+  padding: 0 var(--margin) 64px;
+}
+
+.reviews__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% 50%;
+  filter: brightness(0.7);
+}
+
+.reviews__title {
+  position: absolute;
+  z-index: 1;
+  top: clamp(72px, 10svh, 112px);
+  left: var(--margin);
+  font-size: var(--step-head);
+  color: var(--paper);
+}
+
+.reviews__quote {
+  position: relative;
+  grid-column: 1 / 9;
+  min-height: 4.2em;
+  display: flex;
+  align-items: flex-end;
+  font-family: var(--font-display);
+  font-size: var(--step-lead);
+  line-height: 1.2;
+}
+
+.reviews__quote p {
+  max-width: 30ch;
+}
+
+.reviews__meta {
+  position: relative;
+  grid-column: 10 / 13;
+  display: grid;
+  gap: 14px;
+  justify-items: end;
+  text-align: right;
+}
+
+.reviews__controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-variant-numeric: tabular-nums;
+}
+
+.reviews__controls button {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  background: rgb(248 248 245 / 0.14);
+  color: var(--paper);
+  font-size: var(--step-body);
+  transition:
+    background-color var(--t-hover) ease,
+    transform var(--t-press) var(--ease-out);
+}
+
+.reviews__controls button:hover {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.reviews__controls button:active {
+  transform: scale(0.94);
+}
+
+.reviews__controls span {
+  min-width: 4.5em;
+  text-align: center;
+  font-size: var(--step-small);
+}
+
+@media (max-width: 767px) {
+  .reviews {
+    height: max(80svh, 560px);
+    padding: 0 20px 40px;
+    row-gap: 28px;
+  }
+
+  .reviews__photo {
+    object-position: 82% 50%;
+  }
+
+  .reviews__title {
+    left: 20px;
+  }
+
+  .reviews__quote,
+  .reviews__meta {
+    grid-column: 1 / -1;
+  }
+
+  .reviews__meta {
+    justify-items: start;
+    text-align: left;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+}
