@@ -1,0 +1,66 @@
+/* The boutique's own flyer, large, on a field as dark as the flyer itself. */
+.hire {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  align-items: center;
+  column-gap: var(--gutter);
+  padding: clamp(96px, 9vw, 140px) var(--margin);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.hire__copy {
+  display: grid;
+  gap: 22px;
+  justify-items: start;
+}
+
+.hire__copy h2 {
+  font-size: var(--step-head);
+}
+
+.hire__copy p {
+  max-width: 24ch;
+  font-family: var(--font-display);
+  font-size: var(--step-lead);
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+}
+
+.hire__copy .text-link {
+  margin-top: 4px;
+  color: var(--paper);
+}
+
+.hire__copy .text-link:hover {
+  color: #ffffff;
+}
+
+.hire__flyer {
+  justify-self: end;
+  width: min(100%, 720px);
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.hire__flyer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Tablet and phone: the words, then the flyer at full width. */
+@media (max-width: 899px) {
+  .hire {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 40px;
+    padding: 96px 20px;
+  }
+
+  .hire__flyer {
+    justify-self: stretch;
+    width: 100%;
+  }
+}

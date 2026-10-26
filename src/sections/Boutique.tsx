@@ -7,14 +7,11 @@ import './Boutique.css';
 
 // Offsets from the centre of the band (px at 1440 wide), width, and how far each picture drifts.
 const layout = [
-  { x: -410, y: -330, w: 190, drift: 10 },
-  { x: -120, y: -380, w: 170, drift: 5 },
-  { x: 190, y: -320, w: 200, drift: 8 },
-  { x: -440, y: -20, w: 180, drift: 6 },
-  { x: 250, y: -40, w: 170, drift: 12 },
-  { x: -300, y: 230, w: 200, drift: 9 },
-  { x: 30, y: 250, w: 170, drift: 4 },
-  { x: 300, y: 200, w: 190, drift: 11 },
+  { x: -430, y: -360, w: 220, drift: 10 },
+  { x: 170, y: -390, w: 200, drift: 5 },
+  { x: -480, y: 20, w: 200, drift: 8 },
+  { x: 260, y: -40, w: 220, drift: 12 },
+  { x: -90, y: 220, w: 200, drift: 6 },
 ];
 
 export default function Boutique() {
@@ -108,16 +105,15 @@ export default function Boutique() {
             to={{ yPercent: 0 }}
           />
           <p>
-            Evening gowns and cocktail dresses for hire, with Ella Carlé fashion and Woman on the Move crossbody straps
-            to shop in the salon.
+            Ella Carlé clothing to shop in the salon, with formal wear for hire and Woman on the Move phone cases.
           </p>
           <a
             className="text-link"
-            href={whatsappLink('Hello Revivified Beauty, I would like to come in and try on a dress for hire.')}
+            href={whatsappLink('Hello Revivified Beauty, I would like to know more about the boutique.')}
             target="_blank"
             rel="noreferrer"
           >
-            Book a fitting on WhatsApp <span className="btn__arrow" aria-hidden="true">→</span>
+            Ask about the boutique on WhatsApp <span className="btn__arrow" aria-hidden="true">→</span>
           </a>
         </div>
       </div>

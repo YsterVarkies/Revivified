@@ -4,6 +4,8 @@ import Intro from '@/sections/Intro';
 import TreatmentMenu from '@/sections/TreatmentMenu';
 import Academy from '@/sections/Academy';
 import Boutique from '@/sections/Boutique';
+import DressHire from '@/sections/DressHire';
+import WomanOnTheMove from '@/sections/WomanOnTheMove';
 import Retail from '@/sections/Retail';
 import Reviews from '@/sections/Reviews';
 import Visit from '@/sections/Visit';
@@ -19,6 +21,8 @@ export default function App() {
         <TreatmentMenu />
         <Academy />
         <Boutique />
+        <DressHire />
+        <WomanOnTheMove />
         <Retail />
         <Reviews />
         <Visit />

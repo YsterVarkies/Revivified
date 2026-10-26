@@ -25,7 +25,7 @@ follow the base path. With a custom domain, drop `BASE_PATH` from the workflow.
 | Path | What it holds |
 | --- | --- |
 | `src/data/site.ts` | Every fact and line of copy: contact details, treatments, courses, products, reviews. Edit content here. |
-| `src/sections/` | One component and stylesheet per section, in page order (Hero, Intro, TreatmentMenu, Academy, Boutique, Retail, Reviews, Visit, Footer). |
+| `src/sections/` | One component and stylesheet per section, in page order (Hero, Intro, TreatmentMenu, Academy, Boutique, DressHire, WomanOnTheMove, Retail, Reviews, Visit, Footer). |
 | `src/components/` | React Bits components, installed with `npx shadcn@latest add @react-bits/<Name>-TS-CSS`: SplitText, ScrollReveal, StaggeredMenu, Magnet, FlowingMenu, CountUp, TiltedCard. Their decorative glare, shadows, dividers and numbering are switched off to match the house style. |
 | `src/styles/global.css` | Colour and type tokens, buttons, links. |
 | `public/images/` | Photographs, cropped from the salon's own pictures on revivifiedbeauty.mypixieset.com. |

@@ -239,6 +239,14 @@ p {
   display: inline-block;
 }
 
+/* A masked heading keeps its descenders: the word and heading clips reach below the line without moving it. */
+.split-parent,
+.split-word-mask,
+.split-char-mask {
+  padding-bottom: 0.2em;
+  margin-bottom: -0.2em;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

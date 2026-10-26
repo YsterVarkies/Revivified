@@ -139,11 +139,21 @@ export const boutique = {
   photos: [
     { src: asset('images/boutique-gown-train.webp'), alt: 'A beaded silver gown with a long lace train on the lounge rug' },
     { src: asset('images/ella-pink-top.webp'), alt: 'A pink bubble-hem top from Ella Carlé' },
-    { src: asset('images/wotm-crossbody.webp'), alt: 'A tan Woman on the Move crossbody phone wallet' },
     { src: asset('images/ella-floral.webp'), alt: 'Two floral midi dresses from Ella Carlé' },
     { src: asset('images/boutique-ella-rack.webp'), alt: 'Two women browsing a rail of Ella Carlé clothing' },
-    { src: asset('images/wotm-leopard.webp'), alt: 'A leopard print crossbody phone pouch' },
     { src: asset('images/ella-friends.webp'), alt: 'Two friends in striped tops and linen shorts' },
+  ],
+};
+
+export const dressHire = {
+  image: asset('images/formal-wear-hire.webp'),
+  alt: 'Elegantly Styled Boutique: formal wear for hire. A woman in a black off-the-shoulder dress beside the RB boutique logo, Revivified Beauty Salon, 32 Peter Mokaba Street, 071 359 4956.',
+};
+
+export const womanOnTheMove = {
+  photos: [
+    { src: asset('images/wotm-crossbody.webp'), alt: 'A tan Woman on the Move crossbody phone wallet' },
+    { src: asset('images/wotm-leopard.webp'), alt: 'A leopard print crossbody phone pouch' },
     { src: asset('images/wotm-phone.webp'), alt: 'A phone on a beige crossbody strap' },
   ],
 };
@@ -194,7 +204,7 @@ export const retail = [
 ];
 
 export const counterNote =
-  'Also at the counter: Gin and Fruit Caviar in thirteen flavours, from chilli and mango to rooibos and ginger, Woman on the Move crossbody straps and Ella Carlé clothing.';
+  'Also at the counter: Gin and Fruit Caviar in thirteen flavours, from chilli and mango to rooibos and ginger.';
 
 export const reviews = [
   'Calm, relaxing, private and clean. Great therapists that are very knowledgeable. Definitely recommend.',
