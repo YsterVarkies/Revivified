@@ -187,8 +187,8 @@ export const retail = [
   {
     name: 'Malu Wilz and Lovella',
     text: 'Make-up made in Germany that cares for the skin, with Lovella’s coating sealer, brow styling soap and keratin lash serum.',
-    image: asset('images/retail-lovella.webp'),
-    alt: 'Lovella brow styling soap in an open gold compact',
+    image: asset('images/retail-malu-wilz.webp'),
+    alt: 'An open jar of Malu Wilz loose powder with a white puff on scattered powder',
     size: 'square',
   },
   {
